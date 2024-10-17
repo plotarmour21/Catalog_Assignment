@@ -11,7 +11,8 @@ import {
 } from "recharts";
 import { format } from "date-fns";
 import Menu from "./Menu";
-import Actions from "./Actions";
+import FullscreenIcon from "./FullscreenIcon";
+import CompareIcon from "./CompareIcon";
 
 export default function CryptoChart() {
   const [data, setData] = useState([]);
@@ -27,7 +28,7 @@ export default function CryptoChart() {
           `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=${timeRange}`
         );
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error("Network response was not ok.");
         }
         const result = await response.json();
         const formattedData = result.prices.map(([timestamp, price]) => ({
@@ -78,13 +79,23 @@ export default function CryptoChart() {
       <Menu />
 
       <section className="flex">
-        <Actions />
+        <div className=" w-[750px]  h-[33px] left-[60px] top-[325px]  mb-5 mt-5 ">
+          <nav className="w-auto h-[23px]  flex leading-[22.7px] left-[94px] ">
+            <FullscreenIcon />
+            <span className="top-[330px] left-[94px] w-[83px] h-[23px] leading-[22.77px] pl-[14px] mr-[34px]  ">
+              Fullscreen
+            </span>
+
+            <CompareIcon />
+            <span className="left-[242px] top-[330px] h-[23px] w-[76px] leading-[22.77px] pl-[14px] ">
+              Compare
+            </span>
+          </nav>
+        </div>
         <div className="mb-4 flex gap-2 items-center">
           <button
             className={`px-3 py-1 rounded ${
-              timeRange === "1"
-                ? "bg-[#4B40EE] text-white"
-                : " text-gray-700"
+              timeRange === "1" ? "bg-[#4B40EE] text-white" : " text-gray-700"
             }`}
             onClick={() => setTimeRange("1")}
           >
@@ -92,9 +103,7 @@ export default function CryptoChart() {
           </button>
           <button
             className={`px-3 py-1 rounded ${
-              timeRange === "3"
-                ? "bg-[#4B40EE] text-white"
-                : " text-gray-700"
+              timeRange === "3" ? "bg-[#4B40EE] text-white" : " text-gray-700"
             }`}
             onClick={() => setTimeRange("3")}
           >
@@ -102,9 +111,7 @@ export default function CryptoChart() {
           </button>
           <button
             className={`px-3 py-1 rounded ${
-              timeRange === "7"
-                ? "bg-[#4B40EE] text-white"
-                : " text-gray-700"
+              timeRange === "7" ? "bg-[#4B40EE] text-white" : " text-gray-700"
             }`}
             onClick={() => setTimeRange("7")}
           >
@@ -112,9 +119,7 @@ export default function CryptoChart() {
           </button>
           <button
             className={`px-3 py-1 rounded ${
-              timeRange === "30"
-                ? "bg-[#4B40EE] text-white"
-                : " text-gray-700"
+              timeRange === "30" ? "bg-[#4B40EE] text-white" : " text-gray-700"
             }`}
             onClick={() => setTimeRange("30")}
           >
@@ -122,9 +127,7 @@ export default function CryptoChart() {
           </button>
           <button
             className={`px-3 py-1 rounded ${
-              timeRange === "180"
-                ? "bg-[#4B40EE] text-white"
-                : " text-gray-700"
+              timeRange === "180" ? "bg-[#4B40EE] text-white" : " text-gray-700"
             }`}
             onClick={() => setTimeRange("180")}
           >
@@ -132,9 +135,7 @@ export default function CryptoChart() {
           </button>
           <button
             className={`px-3 py-1 rounded ${
-              timeRange === "365"
-                ? "bg-[#4B40EE] text-white"
-                : " text-gray-700"
+              timeRange === "365" ? "bg-[#4B40EE] text-white" : " text-gray-700"
             }`}
             onClick={() => setTimeRange("365")}
           >
@@ -142,9 +143,7 @@ export default function CryptoChart() {
           </button>
           <button
             className={`px-3 py-1 rounded ${
-              timeRange === "max"
-                ? "bg-[#4B40EE] text-white"
-                : " text-gray-700"
+              timeRange === "max" ? "bg-[#4B40EE] text-white" : " text-gray-700"
             }`}
             onClick={() => setTimeRange("max")}
           >
