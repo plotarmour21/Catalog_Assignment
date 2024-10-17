@@ -11,8 +11,8 @@ import {
 } from "recharts";
 import { format } from "date-fns";
 import Menu from "./Menu";
-import FullscreenIcon from "./FullscreenIcon";
-import CompareIcon from "./CompareIcon";
+import FullscreenIcon from "./icons/FullscreenIcon";
+import CompareIcon from "./icons/CompareIcon";
 
 export default function CryptoChart() {
   const [data, setData] = useState([]);
@@ -55,7 +55,7 @@ export default function CryptoChart() {
   const priceChangePercentage = (priceChange / data[0]?.price) * 100;
 
   return (
-    <div className="w-[939px] h-[343px] top-[60px] left-[60px] gap-0 opacity-1 absolute">
+    <div className="w-[90%] h-[343px] top-[60px] left-[60px] gap-0 opacity-1 absolute">
       <div className="w-[326px] h-[122px]">
         <div className="font-circular text-[70px] font-normal text-[#1A243A] w-[269px] h-[89px]">
           {latestPrice?.toLocaleString(undefined, {
@@ -78,8 +78,8 @@ export default function CryptoChart() {
 
       <Menu />
 
-      <section className="flex">
-        <div className=" w-[750px]  h-[33px] left-[60px] top-[325px]  mb-5 mt-5 ">
+      <section className="flex  w-[750px] justify-between ">
+        <div className=" h-[33px] left-[60px] top-[325px]  mb-5 mt-5 ">
           <nav className="w-auto h-[23px]  flex leading-[22.7px] left-[94px] ">
             <FullscreenIcon />
             <span className="top-[330px] left-[94px] w-[83px] h-[23px] leading-[22.77px] pl-[14px] mr-[34px]  ">
@@ -152,7 +152,7 @@ export default function CryptoChart() {
         </div>
       </section>
 
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width={839} maheight={400} pl-10 z-50>
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis
@@ -170,7 +170,13 @@ export default function CryptoChart() {
             formatter={(value) => [`$${value.toFixed(2)}`, "Price"]}
           />
           <Legend />
-          <Line type="monotone" dataKey="price" stroke="#8884d8" dot={false} />
+          <Line
+            type="monotone"
+            dataKey="price"
+            stroke="#4B40EE"
+            strokeWidth={2}
+            dot={false}
+          />
         </LineChart>
       </ResponsiveContainer>
     </div>
