@@ -1,13 +1,15 @@
-import React from "react";
-
-import CryptoChart from "./Component/CryptoChart";
-import Footer from "./Component/Footer";
-
+ 
+import Menu from "./Component/Menu/Menu"
 export default function App() {
+
   return (
     <div>
-      <CryptoChart />
-      <Footer />
+   
+  
+      <Menu />
+
+   
+      
     </div>
   );
 }
