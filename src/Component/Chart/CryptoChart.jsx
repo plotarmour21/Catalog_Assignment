@@ -1,17 +1,16 @@
 import { useState, useEffect } from "react";
-
-
 import Price from "../Menu/Price";
-
 import ChartControls from "./ChartControls";
 import ChartData from "./ChartData";
-import PropTypes from "prop-types"; 
+import PropTypes from "prop-types";
+
 export default function CryptoChart() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [timeRange, setTimeRange] = useState("7");
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [cryptoType, setCryptoType] = useState("bitcoin");
 
   const toggleFullscreen = () => {
     setIsFullscreen((prev) => !prev);
@@ -22,7 +21,7 @@ export default function CryptoChart() {
       setLoading(true);
       try {
         const response = await fetch(
-          `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=${timeRange}`
+          `https://api.coingecko.com/api/v3/coins/${cryptoType}/market_chart?vs_currency=usd&days=${timeRange}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok.");
@@ -41,7 +40,7 @@ export default function CryptoChart() {
     };
 
     fetchData();
-  }, [timeRange]);
+  }, [timeRange, cryptoType]);
 
   if (loading) return <div className="text-center">Loading... 📈</div>;
   if (error)
@@ -59,25 +58,23 @@ export default function CryptoChart() {
           : "w-[90%] h-[343px] top-[60px] left-[60px] gap-0 opacity-1 absolute"
       }`}
     >
-     
-     <Price
+      <Price
         latestPrice={latestPrice}
         priceChange={priceChange}
         priceChangePercentage={priceChangePercentage}
       />
-    
-<menu />
       <ChartControls
         timeRange={timeRange}
         setTimeRange={setTimeRange}
         toggleFullscreen={toggleFullscreen}
         isFullscreen={isFullscreen}
+        compareEth={cryptoType === "ethereum"}
+        setCompareEth={(isEth) => setCryptoType(isEth ? "ethereum" : "bitcoin")}
       />
       <ChartData data={data} isFullscreen={isFullscreen} />
     </div>
   );
 }
-
 
 function PriceComponent({ latestPrice, priceChange, priceChangePercentage }) {
   return (
@@ -90,8 +87,9 @@ function PriceComponent({ latestPrice, priceChange, priceChangePercentage }) {
     </div>
   );
 }
+
 PriceComponent.propTypes = {
   latestPrice: PropTypes.number.isRequired,
   priceChange: PropTypes.number.isRequired,
-  priceChangePercentage: PropTypes.number.isRequired
+  priceChangePercentage: PropTypes.number.isRequired,
 };

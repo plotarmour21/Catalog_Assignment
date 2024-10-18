@@ -20,7 +20,7 @@ export default function Price({
         {priceChange >= 0 ? "+" : ""}
         {priceChange.toFixed(2)} ({priceChangePercentage.toFixed(2)}%)
       </span>
-      <div className="w-[49px] h-[30px] absolute top-6 left-[280px] font-circular text-[24px] font-normal text-[#BDBEBF] leading-[30.36px]">
+      <div className="w-[49px] h-[30px] absolute  top-6 left-[320px] font-circular text-[24px] font-normal text-[#BDBEBF] leading-[30.36px]">
         USD
       </div>
     </div>
