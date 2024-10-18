@@ -5,7 +5,6 @@ import Statistics from "./Statistic";
 import Analysis from "./Analysis";
 import Settings from "./Settings";
 
-
 export default function Menu() {
   const [activeItem, setActiveItem] = useState("Chart");
 
@@ -15,8 +14,8 @@ export default function Menu() {
 
   return (
     <div>
-      <nav className="w-[1000px] h-[43px] mt-5 absolute top-[200px] left-[90px] z-50">
-      
+   <nav className="max-w-[1000px] w-full h-[43px] mt-5 absolute top-[200px] left-[90px] z-50">
+
         <div>
           <ul className="flex border-b border-gray-200 font-circular">
             <li>
@@ -83,7 +82,6 @@ export default function Menu() {
         </div>
       </nav>
 
-     
       <div className="mt-5">
         {activeItem === "Summary" && <Summary />}
         {activeItem === "Chart" && <CryptoChart />}
