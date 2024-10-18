@@ -14,6 +14,7 @@ export default function CryptoChart() {
 
   const toggleFullscreen = () => {
     setIsFullscreen((prev) => !prev);
+
   };
 
   useEffect(() => {
@@ -70,6 +71,7 @@ export default function CryptoChart() {
         isFullscreen={isFullscreen}
         compareEth={cryptoType === "ethereum"}
         setCompareEth={(isEth) => setCryptoType(isEth ? "ethereum" : "bitcoin")}
+        setCryptoType={setCryptoType}
       />
       <ChartData data={data} isFullscreen={isFullscreen} />
     </div>

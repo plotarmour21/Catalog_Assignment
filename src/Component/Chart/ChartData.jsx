@@ -3,12 +3,14 @@ import { format } from "date-fns";
 import PropTypes from 'prop-types';
 
 const ChartData = ({ data, isFullscreen }) => {
+  console.log(isFullscreen)
+ 
   return (
     <div className="absolute top-[300px] z-50">
       <AreaChart 
         data={data} 
         width={isFullscreen ? window.innerWidth : 839} 
-        height={isFullscreen ? window.innerHeight : 400}
+        height={isFullscreen ? 550 : 400}
       >
         <CartesianGrid strokeDasharray="1 1" fill="#FFFFFF" horizontal={false} />
         <XAxis dataKey="date" tickFormatter={(timestamp) => format(new Date(timestamp), "MMM dd")} />
