@@ -5,7 +5,7 @@ export default function Price({
   priceChangePercentage,
 }) {
   return (
-    <div className="w-[326px] h-[122px] top-[60px] left[60px]">
+    <div className="w-[326px]  absolute h-[122px] top-[60px] left[60px]">
       <div className="font-circular text-[70px] font-normal font-circular text-[#1A243A] w-[269px] h-[89px] leading-[88.56px]">
         {latestPrice?.toLocaleString(undefined, {
           minimumFractionDigits: 2,

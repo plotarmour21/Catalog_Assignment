@@ -1,20 +1,29 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Price from "../Menu/Price";
 import ChartControls from "./ChartControls";
 import ChartData from "./ChartData";
-import PropTypes from "prop-types";
 import Summary from "../Menu/Summary";
+import Graph from "./Graph";
+
+import PropTypes from "prop-types";
 
 export default function CryptoChart() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [timeRange, setTimeRange] = useState("7");
-
   const [cryptoType, setCryptoType] = useState("bitcoin");
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
+
   const toggleFullscreen = () => {
     setIsFullscreen((prev) => !prev);
+    console.log("Fullscreen is now: ", !isFullscreen);
+  };
+
+  const toggleZoom = () => {
+    setIsZoomed((prev) => !prev);
+    console.log("Zoom is now: ", !isZoomed);
   };
 
   useEffect(() => {
@@ -52,13 +61,7 @@ export default function CryptoChart() {
   const priceChangePercentage = (priceChange / data[0]?.price) * 100;
 
   return (
-    <div
-      className={`${
-        isFullscreen
-          ? "fixed inset-0 bg-white z-50"
-          : "w-[90%] h-[343px] top-[60px] left-[60px] gap-0 opacity-1 absolute"
-      }`}
-    >
+    <div className="absolute w-[1000px] h-[789px] ml-10">
       <Price
         latestPrice={latestPrice}
         priceChange={priceChange}
@@ -72,8 +75,11 @@ export default function CryptoChart() {
         compareEth={cryptoType === "ethereum"}
         setCompareEth={(isEth) => setCryptoType(isEth ? "ethereum" : "bitcoin")}
         setCryptoType={setCryptoType}
+        isZoomed={isZoomed}
+        toggleZoom={toggleZoom}
       />
-      <ChartData data={data} isFullscreen={isFullscreen} />
+      <ChartData data={data} isFullscreen={isFullscreen} isZoomed={isZoomed} />
+      <Graph />
     </div>
   );
 }
@@ -90,7 +96,6 @@ function PriceComponent({ latestPrice, priceChange, priceChangePercentage }) {
     </div>
   );
 }
-
 
 PriceComponent.propTypes = {
   latestPrice: PropTypes.number.isRequired,
