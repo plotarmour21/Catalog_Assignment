@@ -6,8 +6,8 @@ export default function Settings() {
       <h2 className="text-2xl font-semibold text-center mb-6 mt-30">
         Settings
       </h2>
-      <div className="bg-white p-6 rounded-lg shadow-lg">
-        <h3 className="text-xl font-bold text-gray-800 mb-4 w-full mt-[90px] ">
+      <div className="bg-white p-6 rounded-lg shadow-lg ml-7">
+        <h3 className="text-xl font-bold text-gray-800 mb-4 w-full mt-[90px] ml-4 ">
           Account Settings
         </h3>
         <p className="text-lg text-gray-600 mb-4">
