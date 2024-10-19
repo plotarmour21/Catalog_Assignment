@@ -1,10 +1,10 @@
-import React from "react";
 
-export default function Summary() {
+
+export default function Summary({latestPrice}) {
   return (
     <div className="p-6 max-w-4xl ">
       <h2 className="text-2xl font-semibold text-center mb-6 absolute top-[180px] left-20 ">
-        Bitcoin Summary
+        Bitcoin Summary {latestPrice}
       </h2>
       <div className="bg-white p-6 rounded-lg shadow-lg top-[280px] absolute">
         <h3 className="text-xl font-bold text-gray-800 mb-4">Overview</h3>
@@ -23,7 +23,7 @@ export default function Summary() {
 
           <div className="bg-gray-100 p-4 rounded-lg text-center">
             <h4 className="text-lg font-bold text-gray-700">Current Price</h4>
-            <p className="text-xl font-semibold text-green-500">$43,000</p>
+            <p className="text-xl font-semibold text-green-500">$68,610</p>
           </div>
 
           <div className="bg-gray-100 p-4 rounded-lg text-center">

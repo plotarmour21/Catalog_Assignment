@@ -3,18 +3,18 @@ import Price from "../Menu/Price";
 import ChartControls from "./ChartControls";
 import ChartData from "./ChartData";
 import PropTypes from "prop-types";
+import Summary from "../Menu/Summary";
 
 export default function CryptoChart() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [timeRange, setTimeRange] = useState("7");
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [cryptoType, setCryptoType] = useState("bitcoin");
 
+  const [cryptoType, setCryptoType] = useState("bitcoin");
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const toggleFullscreen = () => {
     setIsFullscreen((prev) => !prev);
-
   };
 
   useEffect(() => {
@@ -86,9 +86,11 @@ function PriceComponent({ latestPrice, priceChange, priceChangePercentage }) {
         priceChange={priceChange}
         priceChangePercentage={priceChangePercentage}
       />
+      <Summary latestPrice={latestPrice} />
     </div>
   );
 }
+
 
 PriceComponent.propTypes = {
   latestPrice: PropTypes.number.isRequired,
