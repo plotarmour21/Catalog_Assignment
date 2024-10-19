@@ -5,7 +5,11 @@ export default function Settings() {
     <div className="p-6 max-w-9xl mx-auto absolute top-[169px]">
       <h2 className="text-2xl font-semibold text-center mb-6 mt-30">Settings</h2>
       <div className="bg-white p-6 rounded-lg shadow-lg">
+<<<<<<< HEAD
         <h3 className="text-xl font-bold text-gray-800 mb-4 w-full mt-10">Account Settings</h3>
+=======
+        <h3 className="text-xl font-bold text-gray-800 mb-4 w-full ">Account Settings</h3>
+>>>>>>> cd0b22c40025d60c86c0c2c7ae384697bb6ed1ff
         <p className="text-lg text-gray-600 mb-4">
           Manage your account settings and preferences here.
         </p>
