@@ -12,10 +12,11 @@ import {
 import { format } from "date-fns";
 import PropTypes from "prop-types";
 
+
 const ChartData = ({ data, isFullscreen }) => {
   const volumeData = data.map((item) => ({
     date: item.date,
-    volume: item.volume || Math.random() * 1000,
+    volume: item.Price || Math.random() * 1000,
   }));
 
   return (
@@ -80,6 +81,7 @@ const ChartData = ({ data, isFullscreen }) => {
           <Bar dataKey="volume" fill="#E6E8EB " />
         </BarChart>
       </div>
+   
     </div>
   );
 };

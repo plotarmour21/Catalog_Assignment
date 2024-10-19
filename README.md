@@ -29,10 +29,12 @@ This is a **Crypto Chart Dashboard** project built with **React**, **Vite**, **T
 
 You can check out the live demo of the project at the following link:
 
-- [Live Demo](https://catalog-assignment-hazel.vercel.app/)
+- [Live Demo](https://www.portfolio.sumith.dev/)
 
 ## Figma Design Preview
 
 Here is the preview image of the Figma design that the project follows:
 
-![Figma Design](https://utfs.io/f/XRL82CdfISnXHxmkKHaWkh2FBdjID7ZSuP3G95UNml1orJqa)
+![ScreenShot](https://utfs.io/f/XRL82CdfISnXHxmkKHaWkh2FBdjID7ZSuP3G95UNml1orJqa)
+
+![ScreenShot -Responsive](https://utfs.io/f/XRL82CdfISnX5UbHdO6AtP3vRXZ0DC6aU7Qih9YLolsgKqMI)

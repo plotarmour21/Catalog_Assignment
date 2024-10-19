@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Price from "../Menu/Price";
 import ChartControls from "./ChartControls";
 import ChartData from "./ChartData";
 import Summary from "../Menu/Summary";
-import Graph from "./Graph";
 
 import PropTypes from "prop-types";
 
@@ -79,7 +78,8 @@ export default function CryptoChart() {
         toggleZoom={toggleZoom}
       />
       <ChartData data={data} isFullscreen={isFullscreen} isZoomed={isZoomed} />
-      <Graph />
+ 
+    
     </div>
   );
 }

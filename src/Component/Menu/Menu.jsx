@@ -16,7 +16,7 @@ export default function Menu() {
     <div>
       <nav className="max-w-[1000px] w-full h-[43px] mt-5 absolute top-[210px] left-[38px] z-50  ">
         <div>
-          <ul className="flex border-b border-gray-200 font-circular">
+          <ul className="flex border-b border-gray-200 font-circular flex-wrap">
             <li>
               <button
                 className={`px-3 py-2 text-[18px] font-medium ${
