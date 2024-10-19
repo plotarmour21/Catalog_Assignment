@@ -78,8 +78,6 @@ export default function CryptoChart() {
         toggleZoom={toggleZoom}
       />
       <ChartData data={data} isFullscreen={isFullscreen} isZoomed={isZoomed} />
- 
-    
     </div>
   );
 }
