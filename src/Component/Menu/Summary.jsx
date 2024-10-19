@@ -1,10 +1,10 @@
 
 
-export default function Summary({latestPrice}) {
+export default function Summary() {
   return (
     <div className="p-6 max-w-4xl ">
       <h2 className="text-2xl font-semibold text-center mb-6 absolute top-[180px] left-20 ">
-        Bitcoin Summary {latestPrice}
+        Bitcoin Summary
       </h2>
       <div className="bg-white p-6 rounded-lg shadow-lg top-[280px] absolute">
         <h3 className="text-xl font-bold text-gray-800 mb-4">Overview</h3>

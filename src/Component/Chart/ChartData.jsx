@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   AreaChart,
   Area,
@@ -10,14 +9,10 @@ import {
   BarChart,
   Bar,
 } from "recharts";
-=======
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
->>>>>>> cd0b22c40025d60c86c0c2c7ae384697bb6ed1ff
 import { format } from "date-fns";
 import PropTypes from "prop-types";
 
 const ChartData = ({ data, isFullscreen }) => {
-<<<<<<< HEAD
   const volumeData = data.map((item) => ({
     date: item.date,
     volume: item.volume || Math.random() * 1000,
@@ -85,33 +80,6 @@ const ChartData = ({ data, isFullscreen }) => {
           <Bar dataKey="volume" fill="#E6E8EB " />
         </BarChart>
       </div>
-=======
-  console.log(isFullscreen)
- 
-  return (
-    <div className="absolute top-[300px] z-50">
-      <AreaChart 
-        data={data} 
-        width={isFullscreen ? window.innerWidth : 839} 
-        height={isFullscreen ? 550 : 400}
-      >
-        <CartesianGrid strokeDasharray="1 1" fill="#FFFFFF" horizontal={false} />
-        <XAxis dataKey="date" tickFormatter={(timestamp) => format(new Date(timestamp), "MMM dd")} />
-        <YAxis domain={["auto", "auto"]} tickFormatter={(value) => `$${value.toLocaleString()}`} />
-        <Tooltip labelFormatter={(label) => format(new Date(label), "MMM dd, yyyy HH:mm")} formatter={(value) => [`$${value.toFixed(2)}`, "Price"]} />
-        <Legend />
-   
-        <Area 
-          type="monotone" 
-          dataKey="price" 
-          stroke="#4B40EE"  
-          fill="#4B40EE"  
-          fillOpacity={0.06} 
-          strokeWidth={2}
-        />
-  
-      </AreaChart>
->>>>>>> cd0b22c40025d60c86c0c2c7ae384697bb6ed1ff
     </div>
   );
 };

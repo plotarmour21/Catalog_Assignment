@@ -1,9 +1,5 @@
 # Crypto Chart Dashboard
 
-![Crypto Chart Logo](https://img.shields.io/badge/React-Vite-Tailwind%20CSS-blue.svg)
-![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?style=social&logo=github)
-![Live](https://img.shields.io/badge/Live-Demo-green?style=flat&logo=vercel)
-
 ## Project Overview
 
 This is a **Crypto Chart Dashboard** project built with **React**, **Vite**, **Tailwind CSS**, **Recharts**, and the **CoinGecko Public API**. It was an assignment project, where I implemented the following features:
@@ -28,3 +24,15 @@ This is a **Crypto Chart Dashboard** project built with **React**, **Vite**, **T
 - ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-2.0-blue?style=flat&logo=tailwindcss) **Tailwind CSS**: Utility-first CSS framework for styling.
 - ![Recharts](https://img.shields.io/badge/Recharts-v2.0-blue?style=flat&logo=chart) **Recharts**: For creating dynamic and interactive charts.
 - ![CoinGecko](https://img.shields.io/badge/CoinGecko-API-yellow?style=flat&logo=bitcoin) **CoinGecko API**: Provides real-time cryptocurrency data.
+
+## Live Demo
+
+You can check out the live demo of the project at the following link:
+
+- [Live Demo](https://catalog-assignment-hazel.vercel.app/)
+
+## Figma Design Preview
+
+Here is the preview image of the Figma design that the project follows:
+
+![Figma Design](https://utfs.io/f/XRL82CdfISnXHxmkKHaWkh2FBdjID7ZSuP3G95UNml1orJqa)

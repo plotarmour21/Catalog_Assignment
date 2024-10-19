@@ -14,12 +14,7 @@ export default function Menu() {
 
   return (
     <div>
-<<<<<<< HEAD
       <nav className="max-w-[1000px] w-full h-[43px] mt-5 absolute top-[210px] left-[38px] z-50  ">
-=======
-   <nav className="max-w-[1000px] w-full h-[43px] mt-5 absolute top-[200px] left-[90px] z-50">
-
->>>>>>> cd0b22c40025d60c86c0c2c7ae384697bb6ed1ff
         <div>
           <ul className="flex border-b border-gray-200 font-circular">
             <li>
