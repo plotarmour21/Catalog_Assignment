@@ -6,7 +6,19 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"), // Alias @ to src folder
+      "@": path.resolve(__dirname, "src"),
     },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            return "vendor";
+          }
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
   },
 });
