@@ -1,4 +1,4 @@
-import Dev from "../dev";
+import Dev from "../Dev";
 export default function Statistic() {
   return (
     <>
