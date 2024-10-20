@@ -1,5 +1,5 @@
 import { FaGithub, FaLink } from "react-icons/fa";
-
+import { FaGitAlt } from "react-icons/fa";
 const Dev = () => {
   const currentYear = new Date().getFullYear();
   return (
@@ -17,7 +17,7 @@ const Dev = () => {
           </a>
         </div>
 
-        <div className="flex items-center space-x-4 mt-4 md:mt-0">
+        <div className="flex items-center space-x-2 mt-4 md:mt-0">
           <FaGithub className="text-xl" />
           <a
             href="https://github.com/plotarmour21"
@@ -25,19 +25,26 @@ const Dev = () => {
             rel="noopener noreferrer"
             className="text-sm md:text-base font-medium hover:underline"
           >
-            GitHub
+            Plotarmour21
+          </a>
+          <FaGitAlt className="text-xl" />
+          <a
+            href="https://github.com/plotarmour21/Catalog_Assignment"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm md:text-base font-medium hover:underline"
+          >
+            Code
           </a>
         </div>
       </div>
 
       <div className="flex flex-col items-center justify-center space-y-2 pt-2">
-              <p className="text-sm text-muted-foreground">
-                © {currentYear} Sumith. All rights reserved.
-              </p>
-              <p className="text-xs text-muted-foreground">
-               Developed by Sumith
-              </p>
-            </div>
+        <p className="text-sm text-muted-foreground">
+          © {currentYear} Sumith. All rights reserved.
+        </p>
+        <p className="text-xs text-muted-foreground">Developed by Sumith</p>
+      </div>
     </footer>
   );
 };
