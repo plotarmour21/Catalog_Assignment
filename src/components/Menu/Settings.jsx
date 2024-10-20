@@ -1,5 +1,4 @@
-import React from "react";
-
+import Dev from "../dev";
 export default function Settings() {
   return (
     <div className="p-6 max-w-9xl  mx-auto absolute top-[169px]">
@@ -36,7 +35,7 @@ export default function Settings() {
             </p>
           </div>
 
-          <div className="bg-gray-100 p-4 rounded-lg text-center">
+          <div className="bg-gray-100 p-4 rounded-lg text-center pb-11">
             <h4 className="text-lg font-bold text-gray-700">Privacy</h4>
             <p className="text-xl font-semibold text-yellow-500">
               🛡️ Manage your privacy settings and data sharing.
@@ -44,6 +43,7 @@ export default function Settings() {
           </div>
         </div>
       </div>
+      <Dev />
     </div>
   );
 }

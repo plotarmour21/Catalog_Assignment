@@ -1,4 +1,4 @@
-
+import Dev from "../dev";
 
 export default function Analysis() {
   return (
@@ -67,6 +67,7 @@ export default function Analysis() {
           </ul>
         </div>
       </div>
+      <Dev />
     </div>
   );
 }
