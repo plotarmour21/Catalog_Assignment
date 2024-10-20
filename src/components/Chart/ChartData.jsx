@@ -20,7 +20,7 @@ import html2canvas from "html2canvas";
 import { FaRegChartBar } from "react-icons/fa";
 import { FaChartLine } from "react-icons/fa";
 import { FcAreaChart } from "react-icons/fc";
-import Dev from "../dev";
+import Dev from "../Dev";
 
 const ChartData = ({ data, isFullscreen }) => {
   const [chartType, setChartType] = useState("area");
@@ -239,8 +239,6 @@ const ChartData = ({ data, isFullscreen }) => {
         >
           <FaDownload /> Chart Image
         </Button>
-   
-     
       </div>
       <Dev />
     </div>
