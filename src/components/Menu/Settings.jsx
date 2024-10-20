@@ -1,4 +1,4 @@
-import Dev from "../dev";
+import Dev from "../Dev";
 export default function Settings() {
   return (
     <div className="p-6 max-w-9xl  mx-auto absolute top-[169px]">

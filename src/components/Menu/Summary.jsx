@@ -1,3 +1,4 @@
+import Dev from "../Dev";
 export default function Summary() {
   return (
     <div className="p-6 max-w-4xl left-[20px] flex ">
